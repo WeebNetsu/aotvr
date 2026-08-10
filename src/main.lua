@@ -1,5 +1,9 @@
 -- local hands = {};
 
+--- Current pokeballs on screen, this ensures that newly created balls don't disappear
+--- { x: number, y: number, z: number, id: number }
+local onScreenPokeballs = {}
+
 function lovr.load()
     -- Load a 3D model
     -- model = lovr.graphics.newModel('monkey.obj')
@@ -28,7 +32,11 @@ function lovr.draw(pass)
             -- pass:text(z, 0, 5.7, -3, .5)
 
             -- pass:setColor(1, 0, 0)
-            pass:sphere(x, y, z, .05)
+
+            pass:setColor(1, 0, 0)
+            if lovr.headset.isDown(hand, "grip") then
+                pass:sphere(x, y, z, .05)
+            end
         end
         -- print(hand, lovr.headset.getPose(hand))
     end
