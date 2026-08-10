@@ -15,6 +15,7 @@ This is simply me playing around with VR game dev using LOVR. A project just for
 | [Lua](https://lua.org/)                        | Language used for development                  |
 | [LOVR](https://lovr.org/)                      | Like [LOVE2D](https://love2d.org/), but for VR |
 | [ADB](https://developer.android.com/tools/adb) | To install the game onto headset               |
+| [Just](https://github.com/casey/just)          | _(Optional)_ Simplified scripts                |
 
 ### 2. Build and run code
 
